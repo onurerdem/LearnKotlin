@@ -1,5 +1,6 @@
 package com.onurerdem.learnkotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -34,6 +35,12 @@ class MainActivity : AppCompatActivity() {
                     tvAlert.text="Başarıyla kayıt oldunuz!"
                     tvAlert.setTextColor(ContextCompat.getColor(this@MainActivity,R.color.green))
                     tvAlert.visibility= View.VISIBLE
+                    val intent = Intent(this@MainActivity, WelcomeActivity::class.java)
+                    with(intent){
+                        putExtra(Constant.USER_NAME_KEY ,edtFirstName.text.toString())
+                        putExtra(Constant.USER_SURNAME_KEY, edtLastName.text.toString())
+                    }
+                    startActivity(intent)
                 }
             }
         }

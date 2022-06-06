@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">LearnKotlin</string>
+    <string name="btn_text">Gönder</string>
+    <string name="register_text">Kayıt ol</string>
+    <string name="username_edittext_hint">Adınızı giriniz.</string>
+    <string name="usersurname_edittext_hint">Soyadınızı giriniz.</string>
+    <string name="userphone_edittext_hint">Telefon numaranızı giriniz.</string>
+    <string name="userpassword_edittext_hint">Şifrenizi giriniz.</string>
+    <string name="userconfirmpassword_edittext_hint">Şifrenizi tekrar giriniz.</string>
+    <string name="welcome_text">Hoşgeldin %1$s %2$s</string>
 </resources>
