@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Onur/AndroidStudioProjects/LearnKotlin/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2985" />
+        <entry key="..\:/Users/Onur/AndroidStudioProjects/LearnKotlin/app/src/main/res/layout/activity_learn_layout_constraint.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Onur/AndroidStudioProjects/LearnKotlin/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Onur/AndroidStudioProjects/LearnKotlin/app/src/main/res/layout/activity_message_list.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Onur/AndroidStudioProjects/LearnKotlin/app/src/main/res/layout/activity_welcome.xml" value="0.358695652173913" />
       </map>
     </option>
