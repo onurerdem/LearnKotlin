@@ -20,14 +20,14 @@ class MessageListActivity : AppCompatActivity() {
 
     var dump = LogDumpGetUnique().replace(",","\n")
     var dump2 = dump.replace(";","\n")
-    var dump3 = ""
+    //var dump3 = ""
     var tempId = ""
     var tempName = ""
     var tempUserName = ""
     var tempEMail = ""
-    var reDump = ""
-    var dump4 = ""
-    var dump6 = ""
+    //var reDump = ""
+    //var dump4 = ""
+    //var dump6 = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,9 +46,9 @@ class MessageListActivity : AppCompatActivity() {
 
         val arrSplit: List<String> = dump2.split("\n")
         for (i in arrSplit) {
-            if(i.contains("id=") == false){
+            /*if(i.contains("id=") == false){
                 dump3 += i
-            }
+            }*/
             if(i.contains("id=")){
                 tempId += i
             }
@@ -69,9 +69,9 @@ class MessageListActivity : AppCompatActivity() {
         //println(temp1)
         var tempListId = temp1.split(" ").toTypedArray()
         var tempListName = temp2.split("name=").toTypedArray()
-        var tempListUserName = temp3.split(" ").toTypedArray()
-        var tempListEMail = temp4.split(" ").toTypedArray()
-        var dumpList = dump3.split(" name=").toTypedArray()
+        var tempListUserName = temp3.split("username=").toTypedArray()
+        var tempListEMail = temp4.split("email=").toTypedArray()
+        /*var dumpList = dump3.split(" name=").toTypedArray()
         for(x in 0..dumpList.size - 1){
             reDump += dumpList.get(x) + " " + tempListId.get(x) + "\nname="
         }
@@ -92,7 +92,7 @@ class MessageListActivity : AppCompatActivity() {
         for (k in dump5){
             dump6 += k + "\n"
         }
-        //println(dump6.substring(0,dump6.length - 6))
+        //println(dump6.substring(0,dump6.length - 6))*/
 
         binding.apply {
             rvMessagelist.layoutManager = LinearLayoutManager(this@MessageListActivity, LinearLayoutManager.VERTICAL, false)
@@ -115,7 +115,7 @@ class MessageListActivity : AppCompatActivity() {
             })
 
             for (l in 0..tempListId.size - 1){
-                messageDao.saveMessage(MessageItem(userName = tempListName.get(l + 1).trim(),userLastMessage = tempListUserName.get(l).trim() + "\n" + tempListEMail.get(l).trim(),isRead = false, messageTime = tempListId.get(l).trim()))
+                messageDao.saveMessage(MessageItem(userName = tempListName.get(l + 1).trim(),userLastMessage = tempListUserName.get(l + 1).trim() + "\n" + tempListEMail.get(l +1).trim(),isRead = false, messageTime = tempListId.get(l).substring(3,tempListId.get(l).length)))
             }
 
             btnAdded.setOnClickListener {

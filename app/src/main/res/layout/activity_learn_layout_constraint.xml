@@ -62,7 +62,7 @@
             android:layout_marginTop="12dp"
             android:drawableStart="@drawable/doublecheck"
             android:drawablePadding="4dp"
-            android:gravity="center"
+            android:gravity="start"
             android:text="Merhabalar Nasılsınız?"
             android:textColor="@android:color/darker_gray"
             android:textSize="16sp"
